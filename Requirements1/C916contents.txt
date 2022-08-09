@@ -1,0 +1,19 @@
+
+[32;1mName                                                           LastWriteTime[0m
+[32;1m----                                                           -------------    [0m
+10.1clients.xlsx                                               10/9/2017 3:24:3…
+8.1clients.xlsx                                                10/9/2017 3:22:1…
+9.1clients.xlsx                                                10/9/2017 3:23:2…
+apache_access.log                                              9/22/2017 10:47:…
+Basic Vanilla Milkshake Recipe _ Bobby Flay _ Food Network.pdf 9/22/2017 10:54:…
+C916contents.txt                                               8/9/2022 3:35:58…
+DailyLog.txt                                                   8/9/2022 3:21:50…
+eventA.log                                                     10/9/2017 2:53:2…
+eventB.log                                                     10/9/2017 2:54:0…
+eventC.log                                                     10/9/2017 2:54:3…
+eventD.log                                                     10/9/2017 2:55:1…
+eventE.log                                                     10/9/2017 2:55:5…
+JanuaryEventPic1.jpeg                                          9/22/2017 10:57:…
+prompts.ps1                                                    8/9/2022 3:35:55…
+swedenCarnivalEvent.jpg                                        9/22/2017 10:58:…
+
