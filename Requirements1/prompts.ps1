@@ -3,7 +3,7 @@
 #VARIABLE DECLARATION
 $error0 = "Invalid selection, please choose from 1-5."
 $userinput = 0
-$date = Get-Date -DisplayHint Date
+$gendate = Get-Date -DisplayHint Date
 
 ### FUNCTION DECLARATION ###
 
@@ -23,9 +23,10 @@ function Open-Menu {
 # It then selects the name of each file and saves it to the DailyLog.txt file.
 # Then the contents of the DailyLog.txt file is displayed in addition to the current date.
 function Show-Logs {
-    Write-Host "Today's Date: $date" -ForegroundColor DarkGreen
+    $specdate = Get-Date -Format "yyyy-MM-dd-HHmm"
+    Write-Host "Today's Date: $gendate" -ForegroundColor DarkGreen
     Write-Host "Below is a list of log files"
-    Get-ChildItem ./ -Filter *.log | Select-Object Name | Sort-Object -Property Name | Out-File DailyLog.txt
+    Get-ChildItem ./ -Filter *.log | Select-Object Name | Sort-Object -Property Name | Out-File $specdate`DailyLog.txt
     Get-Content ./DailyLog.txt
 }
 
