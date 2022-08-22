@@ -36,13 +36,17 @@ function Show-Files {
     Get-Content ./C916contents.txt
 }
 
-
+# This function is used to display the current CPU and memory usage.
 function Show-Perf {
     Get-Counter '\Processor(_Total)\% Processor Time'
     Get-Counter '\Memory\Available MBytes'
 }
-Get-Process *
-#BODY
+
+# This function is used to display the current running processes
+# for the computer. 
+Get-Process * | Format-List 
+
+### BODY ###
 Clear-host
 try {
     while ($userinput -ne 5) {
@@ -59,19 +63,10 @@ try {
         }
 }
 }
+catch [System.OutOfMemoryException] {
+    Write-Host "A memory issue has been detected, terminating program."
+}
 catch {
     Write-Host "An error has occurred:" -ForegroundColor Red
     Write-Host $_
 }
-
-#Open-Menu
-#switch (Read-Host -Prompt "Selection") {
-#    {$_ -lt 1} {Write-Host $error0 -ForegroundColor Red}
-#    {$_ -gt 5} {Write-Host $error0 -ForegroundColor Red}
-#    1 {Show-Logs}
-#    2 {Show-Files}
-#    3 {Show-Perf}
-#    4 {Write-Host "You selected 4"}
-#    5 {Write-Host "Goodbye." -ForegroundColor Red
-#        Exit-PSHostProcess}
-#    default {Write-Host "Invalid selection, please choose from 1-5."}
