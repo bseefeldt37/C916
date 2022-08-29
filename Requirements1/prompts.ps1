@@ -44,29 +44,48 @@ function Show-Perf {
 }
 
 # This function is used to display the current running processes
-# for the computer. 
-Get-Process * | Format-List 
+# for the computer. It then selects the name and VM properties and sorts by VM.
+function Show-Process {
+    Get-Process * | select Name, VM | Sort-Object VM | Format-Table Name, VM
+}
+
 
 ### BODY ###
 Clear-host
+
+# Start of the try/catch statement. This is used to catch errors and terminate
+# the script if needed.
 try {
+
+    # While is used to show the menu until the user input is equal to the
+    # terminating condition, 5.
     while ($userinput -ne 5) {
         Open-Menu
+
+        # This switch statement runs the functions outlined above. It also
+        # includes error handeling if the nuber entered is less than 1 or greater
+        # than 5.
         switch ($userinput = Read-Host -Prompt "Selection") {
             {$_ -lt 1} {Write-Host $error0 -ForegroundColor Red}
             {$_ -gt 5} {Write-Host $error0 -ForegroundColor Red}
             1 {Show-Logs}
             2 {Show-Files}
             3 {Show-Perf}
-            4 {Write-Host "You selected 4"}
+            4 {Show-Process}
             5 {Write-Host "Goodbye." -ForegroundColor Red
                 Exit-PSHostProcess}
         }
 }
 }
+
+# This is the catch for if the system has memory issues. It will terminate the
+# script.
 catch [System.OutOfMemoryException] {
     Write-Host "A memory issue has been detected, terminating program."
 }
+
+# This catch will display the section of the script that has run into an error
+# for troubleshooting purposes.
 catch {
     Write-Host "An error has occurred:" -ForegroundColor Red
     Write-Host $_

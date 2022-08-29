@@ -2,18 +2,25 @@
 [32;1mName                                                           LastWriteTime[0m
 [32;1m----                                                           -------------    [0m
 10.1clients.xlsx                                               10/9/2017 3:24:3…
-8.1clients.xlsx                                                10/9/2017 3:22:1…
-9.1clients.xlsx                                                10/9/2017 3:23:2…
-apache_access.log                                              9/22/2017 10:47:…
-Basic Vanilla Milkshake Recipe _ Bobby Flay _ Food Network.pdf 9/22/2017 10:54:…
-C916contents.txt                                               8/22/2022 3:35:1…
-DailyLog.txt                                                   8/22/2022 3:35:0…
-eventA.log                                                     10/9/2017 2:53:2…
-eventB.log                                                     10/9/2017 2:54:0…
-eventC.log                                                     10/9/2017 2:54:3…
-eventD.log                                                     10/9/2017 2:55:1…
-eventE.log                                                     10/9/2017 2:55:5…
+Screen Shot 2022-08-29 at 9.05.20 AM.png                       8/29/2022 9:05:2…
+Screen Shot 2022-08-29 at 9.01.29 AM.png                       8/29/2022 9:01:3…
+Screen Shot 2022-08-29 at 9.01.06 AM.png                       8/29/2022 9:01:1…
+Screen Shot 2022-08-29 at 9.00.50 AM.png                       8/29/2022 9:00:5…
+Screen Shot 2022-08-29 at 9.00.34 AM.png                       8/29/2022 9:00:3…
+prompts.ps1                                                    8/29/2022 9:09:3…
 JanuaryEventPic1.jpeg                                          9/22/2017 10:57:…
-prompts.ps1                                                    8/22/2022 3:34:5…
+eventE.log                                                     10/9/2017 2:55:5…
+eventD.log                                                     10/9/2017 2:55:1…
+eventC.log                                                     10/9/2017 2:54:3…
+eventB.log                                                     10/9/2017 2:54:0…
+eventA.log                                                     10/9/2017 2:53:2…
+DailyLog.txt                                                   8/22/2022 3:35:0…
+C916contents.txt                                               8/29/2022 9:09:3…
+Basic Vanilla Milkshake Recipe _ Bobby Flay _ Food Network.pdf 9/22/2017 10:54:…
+apache_access.log                                              9/22/2017 10:47:…
+9.1clients.xlsx                                                10/9/2017 3:23:2…
+8.1clients.xlsx                                                10/9/2017 3:22:1…
+2022-08-29-0909DailyLog.txt                                    8/29/2022 9:09:3…
+Screen Shot 2022-08-29 at 9.05.38 AM.png                       8/29/2022 9:05:4…
 swedenCarnivalEvent.jpg                                        9/22/2017 10:58:…
 
