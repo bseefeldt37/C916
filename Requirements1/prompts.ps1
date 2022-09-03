@@ -27,7 +27,7 @@ function Show-Logs {
     Write-Host "Today's Date: $gendate" -ForegroundColor DarkGreen
     Write-Host "Below is a list of log files"
     Get-ChildItem ./ -Filter *.log | Select-Object Name | Sort-Object -Property Name | Out-File $specdate`DailyLog.txt
-    Get-Content ./DailyLog.txt
+    Get-Content ./$specdate`DailyLog.txt
 }
 
 # This Function is used to save the current folder's contents to the C916contents.txt file
@@ -46,9 +46,8 @@ function Show-Perf {
 # This function is used to display the current running processes
 # for the computer. It then selects the name and VM properties and sorts by VM.
 function Show-Process {
-    Get-Process * | select Name, VM | Sort-Object VM | Format-Table Name, VM
+    Get-Process * | select Name, VM | Sort-Object VM | Out-Gridview
 }
-
 
 ### BODY ###
 Clear-host
