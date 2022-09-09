@@ -20,5 +20,5 @@ foreach ($member in $financemembers) {
 
 }
 
-git config --global user.email "benjamin.seefeldt@outlook.com"
-git config --global user.name "Benjamin Seefeldt"
+# Creating SQL Database
+
