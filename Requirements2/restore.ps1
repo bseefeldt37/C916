@@ -56,7 +56,7 @@ $db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -Argument
 $db.Create()
 
 #Create Table
-$tb = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Table -ArgumentList $db, $tbname
+$tb = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Table -ArgumentList $dbname, $tbname
 
 $Typestring = [Microsoft.SqlServer.Management.Smo.DataType]::varChar(50)
 $Typezip = [Microsoft.SqlServer.Management.Smo.DataType]::varChar(5)
