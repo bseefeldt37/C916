@@ -23,11 +23,10 @@ function Open-Menu {
 # It then selects the name of each file and saves it to the DailyLog.txt file.
 # Then the contents of the DailyLog.txt file is displayed in addition to the current date.
 function Show-Logs {
-    $specdate = Get-Date -Format "yyyy-MM-dd-HHmm"
     Write-Host "Today's Date: $gendate" -ForegroundColor DarkGreen
     Write-Host "Below is a list of log files"
-    Get-ChildItem ./ -Filter *.log | Select-Object Name | Sort-Object -Property Name | Out-File $specdate`DailyLog.txt
-    Get-Content ./$specdate`DailyLog.txt
+    Get-ChildItem ./ -Filter *.log | Select-Object Name | Sort-Object -Property Name | Out-File DailyLog.txt -Append
+    Get-Content ./DailyLog.txt
 }
 
 # This Function is used to save the current folder's contents to the C916contents.txt file

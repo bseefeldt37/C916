@@ -8,3 +8,13 @@ eventC.log
 eventD.log
 eventE.log
 
+
+[32;1mName[0m
+[32;1m----[0m
+apache_access.log
+eventA.log
+eventB.log
+eventC.log
+eventD.log
+eventE.log
+
