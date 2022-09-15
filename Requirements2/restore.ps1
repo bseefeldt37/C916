@@ -56,7 +56,7 @@ $db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -Argument
 $db.Create()
 
 #Create Table
-cd "C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA"
+<#cd "C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA"
 $dbinstance = "C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\ClientDB.mdf"
 $tb = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Table -ArgumentList $dbinstance, $tbname
 
@@ -85,7 +85,9 @@ $tb.Columns.Add($col6)
 $col7 = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Column -ArgumentList $tb,"First_Name", $Typephone
 $tb.Columns.Add($col7)
 
-$tb.Create()
+$tb.Create()#>
+
+Invoke-Sqlcmd -ServerInstance
 
 ### TABLE DATA INSERT ###
 Import-Csv .\Requirements2\NewClientData.csv | Write-SqlTableData -DatabaseName $dbname -SchemaName DBO -TableName $tbname
