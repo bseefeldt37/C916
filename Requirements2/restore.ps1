@@ -2,8 +2,8 @@
 
 
 ### BODY ###
-
-# Creation of OU
+try {
+    # Creation of OU
 New-ADOrganizationalUnit finance
 
 # Account import
@@ -89,3 +89,7 @@ $tb.Create()
 
 ### TABLE DATA INSERT ###
 Import-Csv .\Requirements2\NewClientData.csv | Write-SqlTableData -DatabaseName $dbname -SchemaName DBO -TableName $tbname
+}
+catch [System.OutOfMemoryException] {
+    Write-Host "A memory issue has been detected, terminating program."
+}
