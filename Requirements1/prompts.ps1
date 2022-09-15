@@ -25,6 +25,7 @@ function Open-Menu {
 function Show-Logs {
     Write-Host "Today's Date: $gendate" -ForegroundColor DarkGreen
     Write-Host "Below is a list of log files"
+    Get-Date -DisplayHint Date | Out-File DailyLog.txt -Append
     Get-ChildItem ./ -Filter *.log | Select-Object Name | Sort-Object -Property Name | Out-File DailyLog.txt -Append
     Get-Content ./DailyLog.txt
 }
