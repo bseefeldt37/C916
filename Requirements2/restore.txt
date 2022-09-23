@@ -31,8 +31,8 @@ try {
     $db.Create()
 
     #Create Table
-    #$PSfilepath = "C:\Users\LabAdmin\Documents\C916\Requirements2"
-    Invoke-Sqlcmd -ServerInstance $inst -Database $dbname -InputFile $PSScriptRoot\CreateTable.sql
+    $PSfilepath = "C:\Users\LabAdmin\Documents\C916\Requirements2"
+    Invoke-Sqlcmd -ServerInstance $inst -Database $dbname -InputFile $PSfilepath\CreateTable.sql
 
     ### TABLE DATA INSERT ###
     $ClientDataRows = Import-Csv $PSfilepath\NewClientData.csv |
