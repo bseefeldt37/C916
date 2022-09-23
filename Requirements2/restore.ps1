@@ -19,7 +19,7 @@ try {
 
     ### Creating SQL Database ###
     # Variable creation
-    $inst = "SRV19-PRIMARY\SQLEXPRESS"
+    $inst = ".\SQLEXPRESS"
     $dbname = "ClientDB"
     $tbname = "Client_A_Contacts"
 
@@ -27,8 +27,9 @@ try {
     Set-Location "C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL"
 
     # Create DB
-    $db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -ArgumentList $inst, $dbname
-    $db.Create()
+    #$db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -ArgumentList $inst, $dbname
+    #$db.Create()
+    Invoke-Sqlcmd -ServerInstance $inst -InputFile $PSScriptRoot\CreateDB.sql
 
     #Create Table
     #$PSfilepath = "C:\Users\LabAdmin\Documents\C916\Requirements2"
