@@ -27,16 +27,13 @@ try {
     Set-Location "C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL"
 
     # Create DB
-    #$db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -ArgumentList $inst, $dbname
-    #$db.Create()
     Invoke-Sqlcmd -ServerInstance $inst -InputFile $PSScriptRoot\CreateDB.sql
 
     #Create Table
-    #$PSfilepath = "C:\Users\LabAdmin\Documents\C916\Requirements2"
     Invoke-Sqlcmd -ServerInstance $inst -Database $dbname -InputFile $PSScriptRoot\CreateTable.sql
 
     ### TABLE DATA INSERT ###
-    $ClientDataRows = Import-Csv $PSfilepath\NewClientData.csv |
+    $ClientDataRows = Import-Csv $PSScriptRoot\NewClientData.csv |
         ForEach-Object { [PSCustomObject]@{
             first_name = $_.first_name;
             last_name = $_.last_name;
